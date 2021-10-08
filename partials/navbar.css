@@ -1,0 +1,86 @@
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Ephesis&display=swap');
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #060606;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-image: linear-gradient(#00ffe7, #26b1d1);
+            color: #060606;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            z-index: 9;
+            box-shadow: rgb(104 92 92 / 69%) 0px 10px 10px 0px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 10px 10px;
+            padding: 10px 20px;
+            transition: 0.5s ease;
+            border-radius: 30px;
+        }
+
+        nav ul li:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .logsignbtn {
+            display: flex;
+        }
+
+        .logbtn {
+            margin: 10px 10px;
+            padding: 10px 20px;
+            transition: 0.5s ease;
+            border-radius: 30px
+        }
+
+        .logbtn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-family: 'Bonheur Royale', cursive;
+            font-weight: 700;
+        }
+
+        .content {
+            position: relative;
+            top: 59px;
+        }
+        @media screen and (max-width:600px) {
+            nav{
+                position: static;
+            }
+            .content{
+                top: 0px
+            }
+        }
