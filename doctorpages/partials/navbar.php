@@ -8,12 +8,12 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
     <div class="fixing logo">iHealth</div>
     <div class="fixing navigation">
         <ul>
-            <a href="index.php">
+            <a href="../index.php">
                 <li>Home</li>
             </a>
             <?php
             if($loggedin){
-                echo '<a href="hospitallist.php">
+                echo '<a href="../hospitallist.php">
                 <li>Book Appoinment</li>
             </a>
             <a href="#">
@@ -37,10 +37,10 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
             <div class="logbtn">User Login</div>
         </a>';
         }else{
-            echo '<a href="userdashboard.php">
+            echo '<a href="../userdashboard.php">
             <div class="logbtn">Username: '.$_SESSION['username'].'</div>
         </a>
-        <a href="logout.php">
+        <a href="../logout.php">
             <div class="logbtn">Logout</div>
         </a>';
         }

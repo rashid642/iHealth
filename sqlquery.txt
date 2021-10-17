@@ -1,0 +1,9 @@
+//creating table
+CREATE TABLE `ihealth`.`appointments` ( `srno` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(20) NOT NULL , `drusername` VARCHAR(20) NOT NULL , `currenttime` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , `day` INT NOT NULL , `month` INT NOT NULL , `year` INT NOT NULL , `hour` INT NOT NULL , `min` INT NOT NULL , PRIMARY KEY (`srno`)) ENGINE = InnoDB;
+
+
+//insertion
+INSERT INTO `appointments` (`srno`, `username`, `drusername`, `currenttime`, `day`, `month`, `year`, `hour`, `min`) VALUES (NULL, 'rashid', 'tahir', current_timestamp(), '17', '10', '2021', '10', '00');
+
+//searching
+SELECT * FROM `appointments` WHERE `username` LIKE 'rashid' AND `drusername` LIKE 'tahir' AND `day` = 17 AND `month` = 10 AND `year` = 2021
