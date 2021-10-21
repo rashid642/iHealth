@@ -31,27 +31,19 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
         .box h2 {
 
             width: 460px;
-            color: white;
-            background: blue;
+            color: black;
+            background: linear-gradient(#00ffe7, #26b1d1);
             padding: 10px 10px;
             font-family: Arial;
-            /* border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-            border-bottom-left-radius: 20px; */
             border-radius:20px;
         }
 
         .box #list{
 
-            background: rgb(5, 5, 85);
+            background: linear-gradient(#00ffe7, #2ac2e4);
             width: 500px;
             height: 480px;
             padding: 10px 10px;
-            /* border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px; */
             border-radius:30px;
             text-align: center;
             box-shadow: rgb(104 92 92) 0px 10px 10px 0px;
@@ -69,26 +61,17 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
             transition: 0.5s ease;
             margin: 13px 0px;
         }
-        .box #list li a{
-            /* text-decoration: none; */
-        }
         .box #list .listitem :hover {
 
-            background: blue;
-            /* border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            border-bottom-left-radius: 10px; */
+            background: linear-gradient(#339b90, #54b6cc);
             border-radius:10px;
             padding: 10px 10px;
-            /* transform:scale(1.05); */
-            /* transition: 0.5s; */
         }
         .logo {
             font-size: 30px;
             font-family: 'Bonheur Royale', cursive;
             font-weight: 700;
-        }
+        } 
     </style>
 </head>
 
@@ -99,28 +82,29 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
         <ul id="list">
             <h2>Hospital List</h2>
             <li class="listitem">
-                <p><a href="#" style="color: white;">AIIMS</a></p>
+                <p><a href="_cityhospital.php" style="color: black;">City Hospital</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: white;">Apollo Speciality Hospital</a></p>
+                <p><a href="_aiims.php" style="color: black;">AIIMS</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: white;">City Hospital</a></p>
+                <p><a href="#" style="color: black;">Apollo Speciality Hospital</a></p>
+            </li>
+            
+            <li class="listitem">
+                <p><a href="#" style="color: black;">Malar Hospital</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: white;">Malar Hospital</a></p>
+                <p><a href="#" style="color: black;">Jaslok Hospital</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: white;">Jaslok Hospital</a></p>
+                <p><a href="#" style="color: black;">Maxcure Suyosha Hospital</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: white;">Maxcure Suyosha Hospital</a></p>
+                <p><a href="#" style="color: black;">Mittal Hospital</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: white;">Mittal Hospital</a></p>
-            </li>
-            <li class="listitem">
-                <p><a href="#" style="color: white;">Shree Hospital</a></p>
+                <p><a href="#" style="color: black;">Shree Hospital</a></p>
             </li>
         </ul>
     </div>

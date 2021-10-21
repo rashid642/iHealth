@@ -7,3 +7,6 @@ INSERT INTO `appointments` (`srno`, `username`, `drusername`, `currenttime`, `da
 
 //searching
 SELECT * FROM `appointments` WHERE `username` LIKE 'rashid' AND `drusername` LIKE 'tahir' AND `day` = 17 AND `month` = 10 AND `year` = 2021
+
+//drdetail table
+INSERT INTO `drdetail` (`srno`, `drusername`, `fullname`, `speciality`, `qualification`, `experience`, `password`) VALUES (NULL, 'tahir', 'Dr.Sameer Dubey', 'Cardiologist', 'MBBS', '15 years', '123');

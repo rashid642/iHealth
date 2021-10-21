@@ -41,6 +41,9 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
             margin: 26px 70px;
             text-align:center;
         }
+        .appointmentList{
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -60,7 +63,19 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
         <div class="appointment">
             <h1>Your Appoinments</h1>
             <hr>
+            <?php
+                $sql="SELECT * FROM `appointments` WHERE `username` LIKE '".$detail['username']."'";
+                $result=mysqli_query($conn,$sql);
+                $num=mysqli_num_rows($result);
+                while($row=mySqli_fetch_assoc($result)){
+                        echo '<div class="appointmentList">You have '.$row["drusername"].' Appointment on '.$row["day"].'-'.$row["month"].'-'.$row["year"].' at '.$row["hour"].':'.$row["min"].'AM</div>';
+                }
+                if($num==0){
+                    echo '<div class="appointmentList">You have no Appointments</div>';
+                }
+            ?>
         </div>
+
         <?php require 'partials/footer.html'?>
     </div>
 </body>
