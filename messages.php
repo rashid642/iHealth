@@ -27,12 +27,15 @@ $result=mysqli_query($conn,$sql);
         }
         .container{
             height: 500px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 400px;
     margin: auto;
     padding: 20px;
     background: black;
     color: white;
+    margin: 20px auto;
+    overflow-y:scroll;
+    border-radius: 10px;
         }
         .box{
 
@@ -49,17 +52,46 @@ $result=mysqli_query($conn,$sql);
 <body>
     <?php require "partials/navbar.php";?>
     <div class="content">
+        <br>
         <div class="container">
             <h1>Your Messages</h1>
-            <div class="box">
-                <div><a href="http://localhost/iHealth/chats/chat.php?roomname=sammeer-rashid&receiver=rashid">username:Rashid<a></div>
+            <?php
+
+                $list=array();
+                function alreadyPresent($roomname,$list){
+                    $size = count($list);
+                    for($i=0;$i<$size;$i++){
+                        if($list[$i]==$roomname){
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+                $sql="SELECT * FROM `messages` WHERE `sender` LIKE '".$_SESSION["username"]."' OR `receiver` LIKE '".$_SESSION["username"]."'";
+                $result=mysqli_query($conn,$sql);
+                
+                while($row=mysqli_fetch_assoc($result)){
+                    
+                    if(!alreadyPresent($row["roomname"],$list)){
+                        
+                        array_push($list,$row["roomname"]);
+                        echo '<div class="box">
+                        <div><a href="http://localhost/iHealth/chats/chat.php?roomname='.$row["roomname"].'&receiver='.$row["receiver"].'">Chat Room: '.$row["roomname"].'</a></div>
+                        </div>';
+                    }
+                    
+                }
+
+            ?>
+            <!-- <div class="box">
+                <div><a href="http://localhost/iHealth/chats/chat.php?roomname=sammeer-rashid&receiver=rashid">username:Rashid</a></div>
             </div>
             <div class="box">
                 <div>username:Rashid</div>
             </div>
             <div class="box">
                 <div>username:Rashid</div>
-            </div>
+            </div> -->
         </div>
         <?php require 'partials/footer.html'?>
         

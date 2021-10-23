@@ -58,6 +58,7 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
             <h3>E-mail: ".$detail['email']."</h3>
             <h3>Username: ".$detail['username']."</h3>";
             ?>
+            <a href="http://localhost/iHealth/messages.php">View Messages</a>
         </div>
         </div>
         <div class="appointment">

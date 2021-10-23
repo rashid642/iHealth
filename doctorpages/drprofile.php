@@ -133,6 +133,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
             <h3>Speciality:<?php echo $row['speciality']?></h3>
             <h3>Qualification:<?php echo $row['qualification']?></h3>
             <h3>Experience:<?php echo $row['experience']?></h3>
+            <?php  $url="http://localhost/iHealth/chats/chat.php?roomname=".$drusername."-".$_SESSION["username"]."&receiver=".$drusername;?>
+            <a href="<?php echo $url;?>">Send Message</a>
         </div>
         </div>
         <form id="bookappoinmentform" action="appointmentSetter.php" method="post">
