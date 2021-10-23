@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
+if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
     header("location: login.php");
   }
 ?> 
@@ -168,6 +168,8 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
                 
             ?>
         </div>
+
+        
         
         <?php require 'partials/footer.html'?>
         

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
+if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
     header("location: login.php");
   }
 ?> 

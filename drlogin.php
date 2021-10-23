@@ -13,15 +13,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $username=$_POST["username"];
     $password=$_POST["password"];
    
-    $sql= "SELECT * FROM `userdetail` WHERE `username` LIKE '$username' AND `password` LIKE '$password'" ;
+    $sql= "SELECT * FROM `drdetail` WHERE `drusername` LIKE '$username' AND `password` LIKE '$password'" ;
     $result=mysqli_query($conn,$sql);
 
     $num=mysqli_num_rows($result);
     if($num>=1){
         session_start();
-        $_SESSION['loggedin']=true;
+        $_SESSION['drloggedin']=true;
         $_SESSION['username']=$username;
-        header("location: userdashboard.php");
+        header("location: drdashboard.php");
     }
     else{
         $showAlert=true;
@@ -169,8 +169,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
                 . Join with us and be the part of iHealth . </p>
         </div>
         <div class="form">
-            <h2>User Login</h2>
-            <form action="login.php" method="POST">
+            <h2>Doctor Login</h2>
+            <form action="drlogin.php" method="POST">
             <input class="input" name="username" type="text" placeholder="Enter your username">
             <input class="input" name="password" type="password" placeholder="Enter Password">
             <?php
@@ -180,9 +180,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             ?>
             <button type="submit" class="btn">Login</button>
             <form>
-            <a href="signup.php" style="text-align: center; color: rgb(218, 218, 231);">
-                <h3>Register an account</h3>
-            </a>
         </div>
     </div>
 
