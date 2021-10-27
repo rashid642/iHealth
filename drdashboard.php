@@ -37,17 +37,29 @@ if(!isset($_SESSION['drloggedin']) && $_SESSION['drloggedin']!=true){
             font-size:22px;
         }
         .appointment{
-            height: 200px;
+            height: 300px;
             margin: 26px 70px;
             text-align:center;
+            overflow-y:scroll;
         }
         .appointmentList{
+            margin: 10px;
+        }
+        #image {
+            position: fixed;
+            z-index: -1;
+            width: 30%;
+            top: 350px;
+        }
+        #viewmsg{
+            color: blue;
             margin: 10px;
         }
     </style>
 </head>
 <body>
 <?php require 'partials/navbar.php'?>
+<img id="image" src="images/collaborate.svg">
     <div class="content">
         <div class="container">
         <img src="images/dpicon.jpg">
@@ -58,7 +70,7 @@ if(!isset($_SESSION['drloggedin']) && $_SESSION['drloggedin']!=true){
             <h3>Speciality: ".$detail['speciality']."</h3>
             <h3>Username: ".$detail['drusername']."</h3>";
             ?>
-            <a href="http://localhost/iHealth/messages.php">View Messages</a>
+            <a id="viewmsg" href="http://localhost/iHealth/messages.php">View Messages</a>
         </div>
         </div>
         <div class="appointment">

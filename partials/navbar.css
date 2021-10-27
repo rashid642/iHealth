@@ -68,10 +68,9 @@
 
         .logo {
             font-size: 30px;
-            font-family: 'Bonheur Royale', cursive;
+            /* font-family: 'Bonheur Royale', cursive; */
             font-weight: 700;
         }
-
         .content {
             position: relative;
             top: 59px;

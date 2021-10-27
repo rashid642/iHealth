@@ -47,10 +47,17 @@ $result=mysqli_query($conn,$sql);
     color:black;
 
         }
+    #image {
+        position: fixed;
+        z-index: -1;
+        width: 30%;
+        top: 100px;
+    }   
     </style>
 </head>
 <body>
     <?php require "partials/navbar.php";?>
+    <img id="image" src="images/chat.svg">
     <div class="content">
         <br>
         <div class="container">

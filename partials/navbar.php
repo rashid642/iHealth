@@ -20,9 +20,6 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
                 <li>Book Appoinment</li>
             </a>
             <a href="#">
-                <li>Contact Us</li>
-            </a>
-            <a href="#">
                 <li>About Us</li>
             </a>';
             }

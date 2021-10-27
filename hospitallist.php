@@ -72,11 +72,18 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
             font-family: 'Bonheur Royale', cursive;
             font-weight: 700;
         } 
+        #image {
+            position: absolute;
+            z-index: -1;
+            width: 400px;
+            top: 200px;
+        }
     </style>
 </head>
 
 <body>
 <?php require 'partials/navbar.php'?>
+<img id="image" src="images/collaborate.svg">
 <div class="content">
     <div class="box">
         <ul id="list">

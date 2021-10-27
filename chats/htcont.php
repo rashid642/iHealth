@@ -10,7 +10,7 @@ $result=mysqli_query($conn,$sql);
 if(mysqli_num_rows($result)>0){
     while($row=mysqli_fetch_assoc($result)){
             $res=$res.'<div class="chat">
-            <div class="name">'.$row["sender"].' to '.$row["receiver"].'</div>
+            <div class="name">'.$row["sender"].'</div>
             <div class="msg">'.$row["msg"].'</div>
             <div class="time">'.$row["date"].'</div>
             </div>';

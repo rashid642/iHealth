@@ -15,42 +15,47 @@ session_start();
    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Bonheur+Royale&family=Ephesis&display=swap');
-
         .box {
-            height: 500px;
+            height: 600px;
             width:100%;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            justify-content: center;
-            /* background-image: linear-gradient(#00ffe7, #26b1d1); */
-            /* background-image: url('images/bg1.jpeg'); */
-            /* opacity: 0.5; */
-            box-shadow: rgb(104 92 92 / 69%) 0px 10px 10px 0px;
+            /* box-shadow: rgb(104 92 92 / 69%) 0px 10px 10px 0px; */
 
         }
 
         .box img{
             position: absolute;
-            /* z-index: -1; */
-            width: 100%;
+            z-index: -1;
+            width: 50%;
             overflow: hidden;
-            opacity: 0.8;
-            height: 30%;
+            opacity: 1;
+            height: 50%;
         }
         .box h1 {
             font-family: 'Bonheur Royale', cursive;
-            font-size: 70px;
-            z-index: 2;
+    font-size: 70px;
+    z-index: 2;
+    position: absolute;
+    top: 200px;
+    left: 70%;
         }
 
         .box p {
             font-size: 25px;
-            /* font-family: 'Ephesis', cursive; */
-            z-index: 2;
+    /* font-family: 'Ephesis', cursive; */
+    z-index: 2;
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    /* width: 40%; */
+    text-align: center;
         }
     </style>
     <style>
+        #heading {
+            text-align: center;
+            margin: 18px 10px;
+            font-size: 34px;
+        }
         .servicebox {
             height: 300px;
             display: flex;
@@ -58,7 +63,7 @@ session_start();
             text-align: center;
             justify-content: center;
             background-image: linear-gradient(#00ffe7, #26b1d1);
-            width: 80%;
+            width: 30%;
             margin: 30px auto;
             border-radius: 50px;
             box-shadow: rgb(104 92 92) 0px 10px 10px 0px;
@@ -76,6 +81,9 @@ session_start();
             margin: 18px 10px;
             font-size: 34px;
         }
+        #services{
+            display:flex;
+        }
     </style>
     
 </head>
@@ -84,10 +92,11 @@ session_start();
 
 <?php require 'partials/navbar.php'?>
     <div class="content">
+        <br>
         <section>
             <div class="box">
                 <!-- <img src="images/bg2.jpg"> -->
-                <img src="images/bg1.jpeg">
+                <img src="images/doctor2.svg">
                 <!-- <img src="images/bg3.jpg"> -->
                 <h1>iHealth</h1>
                 <p>To connect the people and provide them Health Care
@@ -95,8 +104,9 @@ session_start();
 
             </div>
         </section>
+        <h1 id="heading">Our Services</h1>
         <section id="services">
-            <h1>Our Services</h1>
+            
             <div class="servicebox">
                 <h2>Book Appoinments</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum dignissimos praesentium. Vitae
@@ -116,6 +126,7 @@ session_start();
                     Veniam voluptates necessitatibus asperiores.</p>
             </div>
         </section>
+        <h1 id="heading">Contact Us</h1>
         <?php require 'partials/footer.html'?>
     </div>
 

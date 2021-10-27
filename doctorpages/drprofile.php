@@ -4,6 +4,10 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
     header("location: login.php");
   }
 ?> 
+<?php
+    $drusername=$_GET["drusername"];
+    // echo $drusername;
+?>
 <?php include "partials/connection.php";?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +15,11 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="partials/navbar.css">
-    <link rel="stylesheet" href="partials/footer.css">
+    <link rel="stylesheet" href="../partials/navbar.css">
+    <link rel="stylesheet" href="../partials/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Dr. Rashid</title>
+    <title><?php echo $drusername;?></title>
     <style>
         *{
             margin:0px;
@@ -49,7 +53,9 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
             margin: auto;
             padding: 10px 25px;
             border-radius: 20px;
-
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            background: black;
+            color: white;
         }
         #bookappointment:hover{
             cursor: pointer;
@@ -68,24 +74,32 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
         .commentContainer textarea{
             padding: 10px 4px;
             margin: 10px 10px;
+            border-radius: 10px;
         }
         .commentContainer button{
             padding: 8px 15px;
             border-radius: 10px;
+            background: black;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
         }
-        
+        .heading{
+            text-align: center;
+            margin: 20px 0px;
+            padding-top: 20px;
+        }
     </style>
     <style>
         .reviewsection{
             width: 75%;
             margin: 20px auto;
-            background: black;
+            /* background: black; */
             padding: 10px;
             border-radius: 10px;
             width: 75%;
-            height: 400px;
+            height: 300px;
             overflow-y: scroll;
-    
+            display: flex;
         }
         .reviewsection h1{
             color:white;
@@ -94,9 +108,12 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
         .review{
             width: 70%;
             margin: 5px auto;
-            background: #10f9ee;
+            background: orange;
             border-radius: 10px;
             padding: 5px 15px;
+            width: 45%;
+            height: 100px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
         }
         .username{
             font-size: 12px;
@@ -106,17 +123,18 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
             margin: 15px;
         }
         .reviewtext{
-
+            font-size: 20px;
+        }
+        #sendmsg{
+            color: blue;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <?php require "../partials/navbar.php";?>
     <div class="content">
-        <?php
-            $drusername=$_GET["drusername"];
-            // echo $drusername;
-        ?>
+        
         <?php
             $sql="SELECT * FROM `drdetail` WHERE `drusername` LIKE '$drusername'";
             $result=mysqli_query($conn,$sql);
@@ -134,7 +152,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
             <h3>Qualification:<?php echo $row['qualification']?></h3>
             <h3>Experience:<?php echo $row['experience']?></h3>
             <?php  $url="http://localhost/iHealth/chats/chat.php?roomname=".$drusername."-".$_SESSION["username"]."&receiver=".$drusername;?>
-            <a href="<?php echo $url;?>">Send Message</a>
+            <a id="sendmsg" href="<?php echo $url;?>">Send Message</a>
         </div>
         </div>
         <form id="bookappoinmentform" action="appointmentSetter.php" method="post">
@@ -143,8 +161,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
         </form>
         
         
-        <div class="reviewsection">
-            <h1>Reviews</h1>
+        
+            <h1 class="heading">Reviews</h1>
             <form action="comment.php" method="POST">
                 <input type="hidden" name="drusername" value="<?php echo $drusername?>"> 
                 <input type="hidden" name="username" value="<?php echo $_SESSION["username"] ?>"> 
@@ -155,7 +173,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
                 <button id="submitComment">Post</button>
             </div>
             </form>
-        
+            <div class="reviewsection">
         <?php
                 $sql="SELECT * FROM `reviews` WHERE `drusername` LIKE '$drusername'";
                 $result=mysqli_query($conn,$sql);

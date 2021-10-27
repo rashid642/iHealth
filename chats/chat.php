@@ -76,11 +76,18 @@ if($_SERVER['REQUEST_METHOD']!="GET"){
     background: black;
     border-radius: 10px;
         }
+    #image {
+    position: fixed;
+    z-index: -1;
+    width: 30%;
+    top: 100px;
+}
         
     </style>
 </head>
 <body>
     <?php require "../partials/navbar.php";?>
+    <img id="image" src="../images/chat.svg">
     <div class="content">
         <?php
         $roomname=$_GET['roomname'];
@@ -106,6 +113,14 @@ if($_SERVER['REQUEST_METHOD']!="GET"){
         <?php require '../partials/footer.html'?>
         
         <script>
+        
+        // function scrollSmoothToBottom ("messages") {
+        //     var div = document.getElementById("messages");
+        //     $('#' + messages).animate({
+        //     scrollTop: div.scrollHeight - div.clientHeight
+        //     }, 1100);
+        // }
+        $("#messages").animate({ scrollTop: 20000000 }, "slow");
 
         setInterval(runFunction,1000);
         function runFunction(){

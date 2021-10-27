@@ -59,12 +59,20 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
       height: 150px;
       border-radius: 10px;
     }
+    #image {
+    position: fixed;
+    z-index: -1;
+    width: 50%;
+    top: 100px;
+    left:60%
+}
   </style>
   
 </head>
 
 <body>
   <?php require 'partials/navbar.php'?>
+  <img id="image" src="images/analyze.svg">
   <div class="content">
     <!--OTHER LIST STARTS HERE-->
     <div class="card">
@@ -72,7 +80,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="#">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=vivek">
           <h1>Dr. Vivek Bahl</h1>
         </a>
         <p><b>Physiologist</b></p>
