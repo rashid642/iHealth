@@ -149,7 +149,19 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             /* font-family: 'Bonheur Royale', cursive; */
             width: 500px;
         }
-
+        body::-webkit-scrollbar {
+            width: 12px;               /* width of the entire scrollbar */
+          }
+          
+          body::-webkit-scrollbar-track {
+            background: #0a0a0a;        /* color of the tracking area */
+          }
+          
+          body::-webkit-scrollbar-thumb {
+            background-color: black;    /* color of the scroll thumb */
+            border-radius: 20px;       /* roundness of the scroll thumb */
+            border: 3px solid #07fbe5;  /* creates padding around scroll thumb */
+          }
         @media screen and (max-width:650px) {
             .left p {
                 width: 100%;
@@ -165,7 +177,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     <div class="content">
         <div class="left">
             <button onclick="window.location.href='index.php'">iHealth</button>
-            <p> To connect the people and provide them Health Care
+            <p> Healthcare is a human right, no matter from where you are
                 . Join with us and be the part of iHealth . </p>
         </div>
         <div class="form">

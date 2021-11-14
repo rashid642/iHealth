@@ -18,13 +18,12 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
             if($loggedin|| $drloggedin){
                 echo '<a href="http://localhost/iHealth/hospitallist.php">
                 <li>Book Appoinment</li>
-            </a>
-            <a href="#">
-                <li>About Us</li>
             </a>';
             }
             ?>
-            
+            <a href="http://localhost/iHealth/contactus.php">
+                <li>Contact Us</li>
+            </a>
         </ul>
     </div>
     <div class="fixing logsignbtn">

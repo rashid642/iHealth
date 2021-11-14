@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD']!="GET"){
         .container{
             width: 500px;
     margin: 10px auto;
-    background: orange;
+    background-image: linear-gradient(#00ffe7, #26b1d1);
     border-radius: 10px;
         }
         .messages{
@@ -45,10 +45,16 @@ if($_SERVER['REQUEST_METHOD']!="GET"){
         }
         .chat{
             border: 2px solid black;
-    margin: 5px 5px;
-    background: black;
-    border-radius: 10px;
-    padding: 7px 9px;
+            margin: 5px 5px;
+            background: black;
+            border-radius: 10px;
+            padding: 7px 9px;
+            /* width: max-content;
+            max-width: 200px;
+            padding: 12px;
+            margin: 5px;
+            border-radius: 20px;
+            overflow-wrap: break-word; */
 }
         
         .name{
@@ -82,7 +88,15 @@ if($_SERVER['REQUEST_METHOD']!="GET"){
     width: 30%;
     top: 100px;
 }
-        
+/* ::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        } */
+        @media screen and (max-width:800px) {
+            .container{
+                width: 100%;
+            }  
+        }
     </style>
 </head>
 <body>
@@ -97,7 +111,7 @@ if($_SERVER['REQUEST_METHOD']!="GET"){
         <div style="text-align: center;"><h1>Chat Room<h1></div>
         <div class="container">
             
-            <div class="messages">
+            <div class="messages" id="msgarea">
                 <!-- <div class="chat">
                     <div class="name">rashid</div>
                     <div class="msg">Hello</div>
@@ -120,11 +134,16 @@ if($_SERVER['REQUEST_METHOD']!="GET"){
         //     scrollTop: div.scrollHeight - div.clientHeight
         //     }, 1100);
         // }
-        $("#messages").animate({ scrollTop: 20000000 }, "slow");
+        // $("#messages").animate({ scrollTop: 20000000 }, "slow");
 
-        setInterval(runFunction,1000);
+        // msgarea=document.getElementById('msgrea')
+        // msgarea.scrollTop = msgarea.scrollHeight;
+
+        // window.scrollTo(0,document.querySelector(".messages").scrollHeight);
+
+        setInterval(runFunction,100);
         function runFunction(){
-            $.post("htcont.php",{roomname:"<?php echo $roomname; ?>"},
+            $.post("htcont.php",{roomname:"<?php echo $roomname; ?>",username:"<?php echo $_SESSION["username"]; ?>"},
             function(data,status){
                 document.getElementsByClassName('messages')[0].innerHTML=data;
                 }

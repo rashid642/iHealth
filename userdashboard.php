@@ -18,6 +18,7 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="partials/footer.css">
     <link rel="stylesheet" href="partials/navbar.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
     <title><?php echo $_SESSION['username']?></title>
     <style>
         .container{
@@ -40,7 +41,7 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
             height: 300px;
             margin: 26px 70px;
             text-align:center;
-            overflow-y:scroll;
+            /* overflow-y:scroll; */
         }
         .appointmentList{
             margin: 10px;
@@ -55,11 +56,27 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
             color: blue;
             margin: 10px;
         }
+        footer{
+            width: 100%;
+        }
+        body::-webkit-scrollbar {
+            width: 12px;               /* width of the entire scrollbar */
+          }
+          
+          body::-webkit-scrollbar-track {
+            background: #0a0a0a;        /* color of the tracking area */
+          }
+          
+          body::-webkit-scrollbar-thumb {
+            background-color: black;    /* color of the scroll thumb */
+            border-radius: 20px;       /* roundness of the scroll thumb */
+            border: 3px solid #07fbe5;  /* creates padding around scroll thumb */
+          }
     </style>
 </head>
 <body>
 <?php require 'partials/navbar.php'?>
-<img id="image" src="images/collaborate.svg">
+<!-- <img id="image" src="images/collaborate.svg"> -->
     <div class="content">
         <div class="container">
         <img src="images/dpicon.jpg">
@@ -77,18 +94,61 @@ if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!=true){
             <h1>Your Appoinments</h1>
             <hr>
             <?php
-                $sql="SELECT * FROM `appointments` WHERE `username` LIKE '".$detail['username']."'";
-                $result=mysqli_query($conn,$sql);
-                $num=mysqli_num_rows($result);
-                while($row=mySqli_fetch_assoc($result)){
-                        echo '<div class="appointmentList">You have '.$row["drusername"].' Appointment on '.$row["day"].'-'.$row["month"].'-'.$row["year"].' at '.$row["hour"].':'.$row["min"].'AM</div>';
-                }
-                if($num==0){
-                    echo '<div class="appointmentList">You have no Appointments</div>';
-                }
+                // $sql="SELECT * FROM `appointments` WHERE `username` LIKE '".$detail['username']."'";
+                // $result=mysqli_query($conn,$sql);
+                // $num=mysqli_num_rows($result);
+                // while($row=mySqli_fetch_assoc($result)){
+                //         echo '<div class="appointmentList">You have '.$row["drusername"].' Appointment on '.$row["day"].'-'.$row["month"].'-'.$row["year"].' at '.$row["hour"].':'.$row["min"].'AM</div>';
+                // }
+                // if($num==0){
+                //     echo '<div class="appointmentList">You have no Appointments</div>';
+                // }
             ?>
-        </div>
 
+        <table class="table" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">Sr No.</th>
+                    <th scope="col">Doctor</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $sql="SELECT * FROM `appointments` WHERE `username` LIKE '".$detail['username']."'";
+                    $sno = 0;
+                    $resultRow = mysqli_query($conn, $sql);
+                    while($row = mysqli_fetch_assoc($resultRow)){
+                    $sno = $sno + 1;
+                    echo ' <tr>
+                    <th scope="row">'.$sno.'</th>
+                    <td>'.$row["drusername"].'</td>
+                    <td>'.$row["day"].'-'.$row["month"].'-'.$row["year"].'</td>
+                    <td>'.$row["hour"].':'.$row["min"].'AM</td>
+                    </tr>';
+                    }
+                ?>
+            </tbody>
+        </table>
+        </div>
+        <br>
+        <br>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+        <script>
+            $(document).ready( function () {
+                $('#myTable').DataTable();
+            } );
+        </script>
+        <script>
+            let edits=document.getElementsByClassName('edit');
+            Array.from(edits).forEach(element=>{
+                element.addEventListener("click",(e)=>{
+                    console.log("edit",e.target);
+                })
+            })
+    </script>
         <?php require 'partials/footer.html'?>
     </div>
 </body>

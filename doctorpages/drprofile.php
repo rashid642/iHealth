@@ -100,6 +100,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
             height: 300px;
             overflow-y: scroll;
             display: flex;
+            scroll-behavior: smooth;
         }
         .reviewsection h1{
             color:white;
@@ -108,7 +109,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
         .review{
             width: 70%;
             margin: 5px auto;
-            background: orange;
+            background: #00fff3fa;
             border-radius: 10px;
             padding: 5px 15px;
             width: 45%;

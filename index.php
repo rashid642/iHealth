@@ -23,12 +23,13 @@ session_start();
         }
 
         .box img{
-            position: absolute;
+            position: relative;
+            top:100px;
             z-index: -1;
             width: 50%;
             overflow: hidden;
             opacity: 1;
-            height: 50%;
+            height: 65%;
         }
         .box h1 {
             font-family: 'Bonheur Royale', cursive;
@@ -83,6 +84,27 @@ session_start();
         }
         #services{
             display:flex;
+            flex-wrap: wrap;
+        }
+        .quotes-section{
+            display:flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin:100px 0px;
+        }
+        .quotes-section img{
+            height: 400px;
+        }
+        .quotes-section h1{
+            width: 400px;
+        }
+        @media only screen and (max-width: 700px) {
+            .box {
+                 height: 400px;
+            }
+            .servicesbox{
+                width:70%;
+            }
         }
     </style>
     
@@ -109,24 +131,24 @@ session_start();
             
             <div class="servicebox">
                 <h2>Book Appoinments</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum dignissimos praesentium. Vitae
-                    perspiciatis, rerum, quos ducimus nulla magnam minima inventore saepe enim deserunt error soluta.
-                    Veniam voluptates necessitatibus asperiores.</p>
+                <p>We provide the option to book appointment from multiple hospitals and doctors </p>
             </div>
             <div class="servicebox">
-                <h2>Select according to reviews</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum dignissimos praesentium. Vitae
-                    perspiciatis, rerum, quos ducimus nulla magnam minima inventore saepe enim deserunt error soluta.
-                    Veniam voluptates necessitatibus asperiores.</p>
+                <h2>Read reviews</h2>
+                <p>You can read reviews of other people and your own reviews about the Doctors</p>
             </div>
             <div class="servicebox">
-                <h2>All Categories of Doctors</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum dignissimos praesentium. Vitae
-                    perspiciatis, rerum, quos ducimus nulla magnam minima inventore saepe enim deserunt error soluta.
-                    Veniam voluptates necessitatibus asperiores.</p>
+                <h2>Chat with Doctors</h2>
+                <p>We also provide chatting feature, so that you can chat with the required Doctor whenever you required, and it's highly secure</p>
             </div>
         </section>
-        <h1 id="heading">Contact Us</h1>
+        <section>
+            <div class="quotes-section">
+                <img src="images/doctor1.svg">
+                <h1>"Health is not just being disease-free. Health is when every cell in your body is bouncing with joy" ~ Sadhguru</h1>
+            </div>
+        </section>
+        <!-- <h1 id="heading">Contact Us</h1> -->
         <?php require 'partials/footer.html'?>
     </div>
 

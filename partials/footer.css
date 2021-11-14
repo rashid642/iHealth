@@ -4,6 +4,7 @@ footer {
     justify-content: center;
     align-items: center;
     background: black;
+    width: 100%;
 }
 
 footer a {
