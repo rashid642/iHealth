@@ -73,63 +73,60 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
 <body>
   <?php require 'partials/navbar.php'?>
   <img id="image" src="images/analyze.svg">
-  <div class="content">
-    <!--OTHER LIST STARTS HERE-->
+  <div class="content">  
+  <div class="card">
+      <div class="image"><img
+          src="images/dpicon.jpg">
+      </div>
+      <div class="card-text">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=kuldeepgupta">
+          <h1>Dr. Kuldeep Gupta</h1>
+        </a>
+        <p><b>Plastic Surgeon </b></p>
+        <p>Wednesday</p>
+        <p>8:00AM-12:00PM</p>
+      </div>
+    </div>
     <div class="card">
       <div class="image"><img
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=vivek">
-          <h1>Dr. Vivek Bahl</h1>
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=adilselvam">
+          <h1>Dr. Adil Selvam</h1>
         </a>
-        <p><b>Physiologist</b></p>
-        <p>Mondays</p>
+        <p><b>Cosmetic Surgery </b></p>
+        <p>Thursday</p>
+        <p>7:00AM-12:00PM</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image"><img
+          src="images/dpicon.jpg">
+      </div>
+      <div class="card-text">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=manishananwani">
+          <h1> Dr. Manisha Nanwani</h1>
+        </a>
+        <p><b>Cardiothoracic & Vascular Surgery </b></p>
+        <p>Mondays And Fridays</p>
+        <p>7:00AM-12:00PM</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image"><img
+          src="images/dpicon.jpg">
+      </div>
+      <div class="card-text">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=geetakumari">
+          <h1>Dr.Geeta Kumari</h1>
+        </a>
+        <p><b>Pediatrician </b></p>
+        <p>Wednesday-Friday</p>
         <p>10:00AM-12:00PM</p>
       </div>
     </div>
-    <div class="card">
-      <div class="image"><img
-          src="images/dpicon.jpg">
-      </div>
-      <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=rashmi">
-          <h1>Dr. Rashmi Batra</h1>
-        </a>
-        <p><b>Cardiologist </b></p>
-        <p>Tuesday And Thursday</p>
-        <p>8:00AM-1:00PM</p>
-      </div>
+      <?php require 'partials/footer.html'?>
     </div>
-    <div class="card">
-      <div class="image"><img
-          src="images/dpicon.jpg">
-      </div>
-      <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=sanjeevsharma">
-          <h1>Dr. Sanjeev Sharma</h1>
-        </a>
-        <p><b>Dermatologist </b></p>
-        <p>Mondays and Wednesday</p>
-        <p>10:00AM-2:00PM</p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="image"><img
-          src="images/dpicon.jpg">
-      </div>
-      <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=anitasaxena">
-          <h1>Dr. Anita Saxena</h1>
-        </a>
-        <p><b>Homopathic </b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-1:00PM</p>
-      </div>
-    </div>
-    
-    <?php require 'partials/footer.html'?>
-  </div>
 </body>
-
 </html>
