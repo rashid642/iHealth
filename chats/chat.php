@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD']!="GET"){
     overflow-y: scroll;
         }
         .chat{
-            border: 2px solid black;
+            //border: 2px solid black;
             margin: 5px 5px;
             background: black;
             border-radius: 10px;
