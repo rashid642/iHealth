@@ -107,7 +107,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="#">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=maheshsancheti">
           <h1>Dr.Mahesh Sancheti</h1>
         </a>
         <p><b>Pediatrician</b></p>
@@ -120,7 +120,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="#">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=sureshyadav">
           <h1>Dr. Suresh Yadav</h1>
         </a>
         <p><b>Homopathic </b></p>
@@ -133,7 +133,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="#">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=vishalzambani">
           <h1>Dr.Vishal Zambani</h1>
         </a>
         <p><b>Oncologists </b></p>
@@ -146,10 +146,10 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="#">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=anupamakawalkar">
           <h1>Dr.Anupama Kawalkar</h1>
         </a>
-        <p><b>Orthopaedic Surgeon </b></p>
+        <p><b>Orthopedic Surgeon </b></p>
         <p>Monday-Friday</p>
         <p>7:00AM-10:00AM</p>
       </div>

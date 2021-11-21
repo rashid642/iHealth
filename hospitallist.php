@@ -95,14 +95,14 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
                 <p><a href="_aiims.php" style="color: black;">AIIMS</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: black;">Apollo Speciality Hospital</a></p>
+                <p><a href="_apollo.php" style="color: black;">Apollo Speciality Hospital</a></p>
             </li>
             
             <li class="listitem">
-                <p><a href="#" style="color: black;">Malar Hospital</a></p>
+                <p><a href="_malar.php" style="color: black;">Malar Hospital</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: black;">Jaslok Hospital</a></p>
+                <p><a href="-jaslok.php" style="color: black;">Jaslok Hospital</a></p>
             </li>
             <li class="listitem">
                 <p><a href="#" style="color: black;">Maxcure Suyosha Hospital</a></p>
