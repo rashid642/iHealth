@@ -105,13 +105,13 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
                 <p><a href="-jaslok.php" style="color: black;">Jaslok Hospital</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: black;">Maxcure Suyosha Hospital</a></p>
+                <p><a href="_maxcureHospital.php" style="color: black;">Maxcure Suyosha Hospital</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: black;">Mittal Hospital</a></p>
+                <p><a href="_mittalHospital.php" style="color: black;">Mittal Hospital</a></p>
             </li>
             <li class="listitem">
-                <p><a href="#" style="color: black;">Shree Hospital</a></p>
+                <p><a href="_shreeHospital.php" style="color: black;">Shree Hospital</a></p>
             </li>
         </ul>
     </div>

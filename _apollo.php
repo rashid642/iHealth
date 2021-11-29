@@ -84,7 +84,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Adarsh Gokhale</h1>
         </a>
         <p><b>Cardiothoracic & Vascular Surgery</b></p>
-        <p>Mondays</p>
+        <p>Monday-Friday</p>
         <p>10:00AM-12:00PM</p>
       </div>
     </div>
@@ -97,8 +97,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Vijay Reddy</h1>
         </a>
         <p><b>Plastic Surgeon</b></p>
-        <p>Tuesday And Thursday</p>
-        <p>8:00AM-1:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -110,8 +110,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Rooma Sinha</h1>
         </a>
         <p><b>Obstetrics & Gynecology</b></p>
-        <p>Mondays and Wednesday</p>
-        <p>10:00AM-2:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -124,7 +124,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
         </a>
         <p><b>General Medicine</b></p>
         <p>Monday-Friday</p>
-        <p>10:00AM-1:00PM</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -136,8 +136,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr.Shankar Navaladi</h1>
         </a>
         <p><b>Dermatologist</b></p>
-        <p>Wednesday</p>
-        <p>8:00AM-12:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <?php require 'partials/footer.html'?>

@@ -83,8 +83,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Kuldeep Gupta</h1>
         </a>
         <p><b>Plastic Surgeon </b></p>
-        <p>Wednesday</p>
-        <p>8:00AM-12:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -96,8 +96,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Adil Selvam</h1>
         </a>
         <p><b>Cosmetic Surgery </b></p>
-        <p>Thursday</p>
-        <p>7:00AM-12:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -109,8 +109,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1> Dr. Manisha Nanwani</h1>
         </a>
         <p><b>Cardiothoracic & Vascular Surgery </b></p>
-        <p>Mondays And Fridays</p>
-        <p>7:00AM-12:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -122,7 +122,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr.Geeta Kumari</h1>
         </a>
         <p><b>Pediatrician </b></p>
-        <p>Wednesday-Friday</p>
+        <p>Monday-Friday</p>
         <p>10:00AM-12:00PM</p>
       </div>
     </div>

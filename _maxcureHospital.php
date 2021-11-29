@@ -73,27 +73,15 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
 <body>
   <?php require 'partials/navbar.php'?>
   <img id="image" src="images/analyze.svg">
-  <div class="content">  
-  <div class="card">
-      <div class="image"><img
-          src="images/dpicon.jpg">
-      </div>
-      <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=arpitbansal2">
-          <h1>Dr. Arpit Bansal</h1>
-        </a>
-        <p><b>Cancer Surgeon</b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
-      </div>
-    </div>
+  <div class="content">
+    <!--OTHER LIST STARTS HERE-->
     <div class="card">
       <div class="image"><img
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=vijayreddy">
-          <h1>Dr. Vijay Reddy</h1>
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=adananmizwan">
+          <h1>Dr. Adanan Mizwan</h1>
         </a>
         <p><b>Dermatologist</b></p>
         <p>Monday-Friday</p>
@@ -105,10 +93,10 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=chetandeka">
-          <h1>Dr. Chetan Deka</h1>
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=adarshgokhale">
+          <h1>Dr. Adarsh  Gokhale</h1>
         </a>
-        <p><b>Orthopaedic Surgeon</b></p>
+        <p><b>Cardiothoracic & Vascular Surgery</b></p>
         <p>Monday-Friday</p>
         <p>10:00AM-12:00PM</p>
       </div>
@@ -118,10 +106,10 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=akhilmukhopadhyaya">
-          <h1>Dr. Akhil Mukhopadhyaya</h1>
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=vijayreddy3">
+          <h1>Dr. Vijay Reddy</h1>
         </a>
-        <p><b>Gastroenterologist</b></p>
+        <p><b>Radiation Oncology, Medical Oncology</b></p>
         <p>Monday-Friday</p>
         <p>10:00AM-12:00PM</p>
       </div>
@@ -131,15 +119,28 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=rajatray">
-          <h1>Dr. Rajat Ray</h1>
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=roomasinha">
+          <h1>Dr. Rooma Sinha</h1>
         </a>
-        <p><b>Plastic Surgeon</b></p>
+        <p><b>Obstetrics & Gynecology</b></p>
         <p>Monday-Friday</p>
         <p>10:00AM-12:00PM</p>
       </div>
-    </div> 
+    </div>
+    <div class="card">
+      <div class="image"><img
+          src="images/dpicon.jpg">
+      </div>
+      <div class="card-text">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=ananthsanghvi">
+          <h1>Dr. Ananth Sanghavi</h1>
+        </a>
+        <p><b>General Medicine</b></p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
+      </div>
+    </div>
     <?php require 'partials/footer.html'?>
-    </div>
+  </div>
 </body>
 </html>

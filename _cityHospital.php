@@ -98,7 +98,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Sudha Deshmukh </h1>
         </a>
         <p><b> Test Tube Baby (IVF &ICSI) & <br>Advance Gynaec. Endoscopic Surgery </b></p>
-        <p>Mondays</p>
+        <p>Monday-Friday</p>
         <p> 8:00AM-11:00AM</p>
       </div>
     </div>
@@ -124,8 +124,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Suresh Yadav</h1>
         </a>
         <p><b>Homopathic </b></p>
-        <p>Monday And Tuesday</p>
-        <p>8:00AM-12:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -137,8 +137,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr.Vishal Zambani</h1>
         </a>
         <p><b>Oncologists </b></p>
-        <p>Monday-Wednesday</p>
-        <p>11:00AM-1:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -151,7 +151,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
         </a>
         <p><b>Orthopedic Surgeon </b></p>
         <p>Monday-Friday</p>
-        <p>7:00AM-10:00AM</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     
