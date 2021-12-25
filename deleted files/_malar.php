@@ -83,8 +83,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Arpit Bansal</h1>
         </a>
         <p><b>Cancer Surgeon</b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
+        <p>Monday-Wednesday</p>
+        <p>8:00AM-11:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -96,8 +96,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Vijay Reddy</h1>
         </a>
         <p><b>Dermatologist</b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
+        <p>Monday-Wednesday</p>
+        <p>8:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -109,8 +109,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Chetan Deka</h1>
         </a>
         <p><b>Orthopaedic Surgeon</b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
+        <p>Tuesday-Thrusday</p>
+        <p>9:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -122,8 +122,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Akhil Mukhopadhyaya</h1>
         </a>
         <p><b>Gastroenterologist</b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
+        <p>Monday-Wednesday</p>
+        <p>8:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -135,8 +135,8 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Rajat Ray</h1>
         </a>
         <p><b>Plastic Surgeon</b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
+        <p>Tuesdays And Fridays</p>
+        <p>9:00AM-12:00PM</p>
       </div>
     </div> 
     <?php require 'partials/footer.html'?>

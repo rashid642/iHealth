@@ -83,6 +83,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             margin: 16px;
             padding: 11px 20px;
             border-radius: 10px;
+            border:0px;
         }
 
         #background {

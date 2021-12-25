@@ -95,7 +95,7 @@ if(!isset($_SESSION['drloggedin']) && $_SESSION['drloggedin']!=true){
             <thead>
                 <tr>
                     <th scope="col">Sr No.</th>
-                    <th scope="col">Doctor</th>
+                    <th scope="col">Patient</th>
                     <th scope="col">Date</th>
                     <th scope="col">Time</th>
                 </tr>

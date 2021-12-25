@@ -84,7 +84,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Vivek Bahl</h1>
         </a>
         <p><b>Physiologist</b></p>
-        <p>Mondays</p>
+        <p>Monday-Friday</p>
         <p>10:00AM-12:00PM</p>
       </div>
     </div>
@@ -97,21 +97,22 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           <h1>Dr. Rashmi Batra</h1>
         </a>
         <p><b>Cardiologist </b></p>
-        <p>Tuesday And Thursday</p>
-        <p>8:00AM-1:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
       <div class="image"><img
           src="images/dpicon.jpg">
+
       </div>
       <div class="card-text">
         <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=sanjeevsharma">
           <h1>Dr. Sanjeev Sharma</h1>
         </a>
         <p><b>Dermatologist </b></p>
-        <p>Mondays and Wednesday</p>
-        <p>10:00AM-2:00PM</p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -124,7 +125,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
         </a>
         <p><b>Homopathic </b></p>
         <p>Monday-Friday</p>
-        <p>10:00AM-1:00PM</p>
+        <p>10:00AM-12:00PM</p>
       </div>
     </div>
     

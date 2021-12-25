@@ -64,7 +64,7 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
     z-index: -1;
     width: 50%;
     top: 100px;
-    left:60%
+    left: 60%;
 }
   </style>
   
@@ -73,16 +73,44 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
 <body>
   <?php require 'partials/navbar.php'?>
   <img id="image" src="images/analyze.svg">
-  <div class="content">  
-  <div class="card">
+  <div class="content">
+
+    <div class="card">
       <div class="image"><img
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=arpitbansal2">
-          <h1>Dr. Arpit Bansal</h1>
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=sammeerdubey">
+          <h1>Dr. Sammer Dubey</h1>
         </a>
-        <p><b>Cancer Surgeon</b></p>
+        <p><b>Cardiologist</b></p>
+        <p>Monday-Friday</p>
+        <p>10:00AM-11:00AM</p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="image"><img
+          src="images/dpicon.jpg">
+      </div>
+      <div class="card-text">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=sudhadeshmukh">
+          <h1>Dr. Sudha Deshmukh </h1>
+        </a>
+        <p><b> Test Tube Baby (IVF &ICSI) & <br>Advance Gynaec. Endoscopic Surgery </b></p>
+        <p>Mondays</p>
+        <p> 8:00AM-11:00AM</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image"><img
+          src="images/dpicon.jpg">
+      </div>
+      <div class="card-text">
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=maheshsancheti">
+          <h1>Dr.Mahesh Sancheti</h1>
+        </a>
+        <p><b>Pediatrician</b></p>
         <p>Monday-Friday</p>
         <p>10:00AM-12:00PM</p>
       </div>
@@ -92,12 +120,12 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=vijayreddy">
-          <h1>Dr. Vijay Reddy</h1>
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=sureshyadav">
+          <h1>Dr. Suresh Yadav</h1>
         </a>
-        <p><b>Dermatologist</b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
+        <p><b>Homopathic </b></p>
+        <p>Monday And Tuesday</p>
+        <p>8:00AM-12:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -105,12 +133,12 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=chetandeka">
-          <h1>Dr. Chetan Deka</h1>
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=vishalzambani">
+          <h1>Dr.Vishal Zambani</h1>
         </a>
-        <p><b>Orthopaedic Surgeon</b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
+        <p><b>Oncologists </b></p>
+        <p>Monday-Wednesday</p>
+        <p>11:00AM-1:00PM</p>
       </div>
     </div>
     <div class="card">
@@ -118,28 +146,17 @@ if((!isset($_SESSION['loggedin'])) && (!isset($_SESSION['drloggedin']))){
           src="images/dpicon.jpg">
       </div>
       <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=akhilmukhopadhyaya">
-          <h1>Dr. Akhil Mukhopadhyaya</h1>
+        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=anupamakawalkar">
+          <h1>Dr.Anupama Kawalkar</h1>
         </a>
-        <p><b>Gastroenterologist</b></p>
+        <p><b>Orthopedic Surgeon </b></p>
         <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
+        <p>7:00AM-10:00AM</p>
       </div>
     </div>
-    <div class="card">
-      <div class="image"><img
-          src="images/dpicon.jpg">
-      </div>
-      <div class="card-text">
-        <a href="http://localhost/iHealth/doctorpages/drprofile.php?drusername=rajatray">
-          <h1>Dr. Rajat Ray</h1>
-        </a>
-        <p><b>Plastic Surgeon</b></p>
-        <p>Monday-Friday</p>
-        <p>10:00AM-12:00PM</p>
-      </div>
-    </div> 
+    
     <?php require 'partials/footer.html'?>
-    </div>
+  </div>
 </body>
+
 </html>

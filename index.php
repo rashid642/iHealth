@@ -135,11 +135,11 @@ session_start();
             </div>
             <div class="servicebox">
                 <h2>Read reviews</h2>
-                <p>You can read reviews of other people and your own reviews about the Doctors</p>
+                <p>You can read reviews of other people and add your own reviews about the Doctors</p>
             </div>
             <div class="servicebox">
                 <h2>Chat with Doctors</h2>
-                <p>We also provide chatting feature, so that you can chat with the required Doctor whenever you required, and it's highly secure</p>
+                <p>We also provide chatting facility, so that you can chat with the required Doctor whenever you want, and it's highly secure</p>
             </div>
         </section>
         <section>
